@@ -7,4 +7,4 @@ A web-scraping application that takes a word list from Kindle highlights export 
 - the English translations of the example sentence
 Which can then be imported into Anki to create flashcards
 
-* All translations & examples are taken from [Jisho](https://jisho.org)
+\* All translations & examples are taken from [Jisho](https://jisho.org)
