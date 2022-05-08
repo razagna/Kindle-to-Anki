@@ -7,11 +7,13 @@ A web-scraping application that takes a word list from **K**indle highlights exp
 
 The information that gets fetched from [Jisho](https://jisho.org) includes:
 - the Japanese word
-- its translation
+- its English translation
 - an example sentence selected at random
 - the reading of the example sentence with furigana
 - the English translations of the example sentence
 
 ## Format
 
-The output can either be an excel spreedsheet (.xlsx) or an Anki package (.apkg)
+Supported output formats are: 
+- Excel spreedsheets (.xlsx)
+- Anki packages (.apkg)
