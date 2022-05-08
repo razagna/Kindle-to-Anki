@@ -1,0 +1,16 @@
+@font-face { font-family: irohamaru mikami; src: url('_irohamaru mikami.ttf'); }
+
+.card {
+ font-family: irohamaru mikami;
+ font-size: 30px;
+ text-align: center;
+ color: black;
+ background-color: white;
+ word-wrap: break word;
+}
+.left { text-align: left }
+.jp { font-size: 30px }
+.win .jp { font-family: "irohamaru mikami", "い ろ はマ ル み か み Regular"; }
+.mac .jp { font-family: "irohamaru mikami", "い ろ はマ ル み か み Regular"; }
+.linux .jp { font-family: "irohamaru mikami", "い ろ はマ ル み か み Regular"; }
+.mobile .jp { font-family: "irohamaru mikami"; }
