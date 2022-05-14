@@ -6,10 +6,9 @@ layout1 = [  [sg.Text("Select a file to load Kindle highlights from:")],
             [sg.Input(size=60), sg.FileBrowse(key="highlights")],
             [sg.Text("Select a location to save your cards in:")],
             [sg.Input(size=60), sg.FolderBrowse(key="destination")],
-            [sg.Text("Pick the format of the cards:")],
-            [sg.Radio('Anki Deck', "RADIO1", key="anki", default=True), sg.Radio('Excel Sheet', "RADIO1")],
-            [sg.Text("File Name:"), sg.Input(key="filename", size=40), sg.Button("Generate"), sg.Button("Cancel")],
-            [sg.Button("Switch")]]
+            [sg.Text("Pick the format of the cards:"), sg.Radio('Anki Deck', "RADIO1", key="anki", default=True), sg.Radio('Excel Sheet', "RADIO1")],
+            [sg.Text("File Name:"), sg.Input(key="filename", size=39), sg.Button("Generate"), sg.Button("Cancel")]  
+        ]
 
 layout2 = [  [sg.Text('Loading....', font='ANY 15')],
             [sg.Image("loading_icon.gif", key='loading')],
@@ -18,7 +17,7 @@ layout2 = [  [sg.Text('Loading....', font='ANY 15')],
 # ----------- Create actual layout using Columns and a row of Buttons
 layout = [[sg.Column(layout1, key='COL1', visible=True), sg.Column(layout2, key='COL2', visible=False)],]
 
-window = sg.Window('Kindle to Anki', layout, size=(530, 250))
+window = sg.Window('Kindle to Anki', layout, size=(530, 200))
 
 while True:
     event, values = window.read()
