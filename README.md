@@ -1,7 +1,7 @@
 # Description
 A web-scraping application that takes a word list from **K**indle highlights export and automatically creates Japanese-English flashcards compatible with **A**nki, hence the name.
 
-![Screenshot](screenshot.png)
+![Screenshot](https://github.com/raxagna/KtoA/blob/main/screenshot.JPG)
 
 # Output
 
