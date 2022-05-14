@@ -8,6 +8,11 @@ import pandas as pd
 front = codecs.open('template/front.html', 'r').read()
 back = codecs.open('template/back.html', 'r').read()
 
+simple_deck = genanki.Deck(
+        2059400110,
+        'Simple Deck'
+    )
+
 simple_model = genanki.Model(
     random.randrange(1 << 30, 1 << 31), #model id must be unique
     'simple_KtoA',
@@ -38,7 +43,7 @@ def create_card(word):
 
     return simple_note
 
-def add_sheet(words):
+def create_sheet(words, location, filename):
     data_frame = 0
     data_frame = pd.DataFrame(columns=['word', 'translations', 'japanese', 'readings','english'])
 
@@ -46,25 +51,16 @@ def add_sheet(words):
         new_row = create_item.get_info(word)
         data_frame = data_frame.append(new_row, ignore_index=True)
 
-    return data_frame
+    data_frame.to_excel(location + '/' + filename + '.xlsx', index=False)
 
-if __name__ == '__main__':
-    
-    simple_deck = genanki.Deck(
-        2059400110,
-        'Simple Deck'
-    )
+def create_package(words, location, filename):
+    # for i in range(len(words)):
+    #     word = words[i]
+    #     card = create_card(word)
+    #     simple_deck.add_note(card)
 
-    words = get_highlights.new_words[0:5]
-
-    # create anki package
-    for i in range(len(words)):
-        word = get_highlights.new_words[i]
+    for word in words:
         card = create_card(word)
         simple_deck.add_note(card)
 
-    genanki.Package(simple_deck).write_to_file('output.apkg')
-
-    # create excel spredsheet
-    df = add_sheet(words)
-    df.to_excel('output.xlsx', index=False)
+    genanki.Package(simple_deck).write_to_file(location + '/' + filename + '.apkg')
