@@ -1,5 +1,5 @@
 # Kindle-to-Anki
-A web-scraping application that takes a word list export from **K**indle highlights and converts them into Japanese-English flashcards compatible with **A**nki.
+KtoA is a web-scraping application that takes a word list export from **K**indle highlights and converts them into Japanese-English flashcards compatible with **A**nki.
 
 ![screenshot](./kindle-to-anki.jpg)
 
@@ -13,7 +13,7 @@ python3 -m pip install PySimpleGUI pandas bs4 genanki
 ```
 2. Run the script
 ```bash
-python3 src/kindle-to-anki.py
+python3 src/KtoA.py
 ```
 
 ### Executable
@@ -27,7 +27,7 @@ pyinstaller --onefile --add-data="assets/loading_icon.gif:assets" src/kindle-to-
 ```
 3. Run the GUI application
 ```bash
-./dist/kindle-to-anki
+./dist/KtoA
 ```
 
 **TIP:** check the [Releases](https://github.com/razagna/Kindle-to-Anki/releases/tag/v1.0.0) section for pre-built executables
