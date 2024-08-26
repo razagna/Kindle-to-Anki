@@ -1,3 +1,6 @@
 __pycache__
 Archive
 jmdict
+build
+dist
+kindle-to-anki.spec
