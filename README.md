@@ -1,20 +1,31 @@
-# Description
-A web-scraping application that takes a word list from **K**indle highlights export and automatically creates Japanese-English flashcards compatible with **A**nki, hence the name.
+# Kindle-to-Anki
+A web-scraping application that takes a word list export from **K**indle highlights and converts them into Japanese-English flashcards compatible with **A**nki.
 
-![Screenshot](https://github.com/raxagna/KtoA/blob/main/screenshot.JPG)
+![screenshot](./kindle-to-anki.jpg)
 
-# Output
+## Usage
+1. Install the requirements
+```bash
+python3 -m pip install -r requirements.txt 
+```
+2. Run the GUI application
+```bash
+python3 src/kindle-to-anki.py
+```
 
-## Contents
+## Output
+The resulting flash-cards have the following contents and format.
+
+### Contents
 
 The information that gets fetched from [Jisho](https://jisho.org) includes:
 - the Japanese word
 - its English translation
-- an example sentence selected at random
+- a randomly selected example sentence
 - the reading of the example sentence with furigana
 - the English translations of the example sentence
 
-## Format
+### Format
 
 Supported output formats are: 
 - Excel spreedsheets (.xlsx)

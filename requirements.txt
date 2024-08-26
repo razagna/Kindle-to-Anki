@@ -1,0 +1,4 @@
+PySimpleGUI
+pandas
+bs4
+genanki
